@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>HabitFlow — Build Better. Live Smarter.</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ====== TOAST ====== -->
 <div class="toast" id="toast"></div>
 
 <!-- ====== HOME PAGE ====== -->
 <div class="page active" id="page-home">
   <div class="home-logo">
+    <div class="logo-badge">
+      <div class="logo-badge-top"><span>OLD HABITS</span></div>
+      <div class="logo-badge-bottom"><span>NEW HABITS</span></div>
+    </div>
     <div class="logo-text">Habit<span>Flow</span></div>
   </div>
 
@@ -21,15 +24,9 @@
     <h1 class="home-heading">Let's make<br><em>your days</em><br>healthier</h1>
     <p class="home-sub">No Rushing. Only your feelings.</p>
 
-    <div class="ticker-wrapper">
-      <div class="ticker-track right" id="ticker1"></div>
-    </div>
-    <div class="ticker-wrapper">
-      <div class="ticker-track left" id="ticker2"></div>
-    </div>
-    <div class="ticker-wrapper">
-      <div class="ticker-track right" id="ticker3"></div>
-    </div>
+    <div class="ticker-wrapper"><div class="ticker-track right" id="ticker1"></div></div>
+    <div class="ticker-wrapper"><div class="ticker-track left"  id="ticker2"></div></div>
+    <div class="ticker-wrapper"><div class="ticker-track right" id="ticker3"></div></div>
 
     <div class="home-buttons">
       <button class="btn-primary" onclick="goTo('signup')">Get Started</button>
@@ -38,17 +35,17 @@
   </div>
 </div>
 
-<!-- ====== SIGN UP PAGE ====== -->
+<!-- ====== SIGN UP ====== -->
 <div class="page" id="page-signup">
   <div class="auth-container">
     <div class="auth-left">
       <div class="logo-area">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-          
-          <div>
-            <div class="logo-name">HabitFlow</div>
-            <div class="logo-tagline">Smart Habit • Productive Routine</div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:5px;">
+          <div class="logo-badge" style="width:30px;height:40px;">
+            <div class="logo-badge-top"><span>OLD</span></div>
+            <div class="logo-badge-bottom"><span>NEW</span></div>
           </div>
+          <div><div class="logo-name">HabitFlow</div><div class="logo-tagline">Smart Habit • Productive Routine</div></div>
         </div>
       </div>
       <div class="auth-welcome">Welcome :)</div>
@@ -57,18 +54,9 @@
     <div class="auth-right">
       <div class="auth-heading">Join over members from around the globe</div>
       <div class="auth-form">
-        <div class="input-group">
-          <span class="icon">✉️</span>
-          <input type="email" id="signup-email" placeholder="Email" />
-        </div>
-        <div class="input-group">
-          <span class="icon">👤</span>
-          <input type="text" id="signup-name" placeholder="Full Name" />
-        </div>
-        <div class="input-group">
-          <span class="icon">🔒</span>
-          <input type="password" id="signup-pass" placeholder="Password" />
-        </div>
+        <div class="input-group"><span class="icon">✉️</span><input type="email" id="signup-email" placeholder="Email"/></div>
+        <div class="input-group"><span class="icon">👤</span><input type="text" id="signup-name" placeholder="Full Name"/></div>
+        <div class="input-group"><span class="icon">🔒</span><input type="password" id="signup-pass" placeholder="Password"/></div>
         <button class="btn-submit" onclick="doSignup()">Submit</button>
         <div class="auth-footer">I Already Have an Account | <a onclick="goTo('login')">Login</a></div>
       </div>
@@ -76,20 +64,17 @@
   </div>
 </div>
 
-<!-- ====== LOGIN PAGE ====== -->
+<!-- ====== LOGIN ====== -->
 <div class="page" id="page-login">
   <div class="auth-container">
     <div class="auth-left">
       <div class="logo-area">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-          <div class="logo-badge" style="width:32px;height:42px;">
-            <div class="logo-badge-top"><span style="font-size:5px;">OLD</span></div>
-            <div class="logo-badge-bottom"><span style="font-size:5px;">NEW</span></div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:5px;">
+          <div class="logo-badge" style="width:30px;height:40px;">
+            <div class="logo-badge-top"><span>OLD</span></div>
+            <div class="logo-badge-bottom"><span>NEW</span></div>
           </div>
-          <div>
-            <div class="logo-text">HabitFlow</div>
-            <div class="logo-tagline">Smart Habit • Productive Routine</div>
-          </div>
+          <div><div class="logo-name">HabitFlow</div><div class="logo-tagline">Smart Habit • Productive Routine</div></div>
         </div>
       </div>
       <div class="auth-welcome">Welcome Back :)</div>
@@ -98,14 +83,8 @@
     <div class="auth-right">
       <div class="auth-heading">Login to continue your journey</div>
       <div class="auth-form">
-        <div class="input-group">
-          <span class="icon">✉️</span>
-          <input type="email" id="login-email" placeholder="Email" />
-        </div>
-        <div class="input-group">
-          <span class="icon">🔒</span>
-          <input type="password" id="login-pass" placeholder="Password" />
-        </div>
+        <div class="input-group"><span class="icon">✉️</span><input type="email" id="login-email" placeholder="Email"/></div>
+        <div class="input-group"><span class="icon">🔒</span><input type="password" id="login-pass" placeholder="Password"/></div>
         <button class="btn-submit" onclick="doLogin()">Login</button>
         <div class="auth-footer">Don't have an account? | <a onclick="goTo('signup')">Sign Up</a></div>
       </div>
@@ -115,9 +94,8 @@
 
 <!-- ====== MAIN APP ====== -->
 <div class="page" id="page-app">
-  <div class="app-main" style="flex:1;display:flex;flex-direction:column;overflow-y:auto;">
+  <div class="app-main" id="appMain">
 
-    <!-- App Header -->
     <div class="app-header">
       <div class="app-greeting">
         <h2>Hello, <span id="user-name-display">User</span> 👋</h2>
@@ -128,9 +106,11 @@
 
     <!-- DASHBOARD TAB -->
     <div class="tab-content active" id="tab-dashboard">
+
       <div class="circle-section">
         <div class="progress-ring-container">
-          <svg class="progress-ring" id="progressRing" width="220" height="220" viewBox="0 0 220 220">
+          <!-- SVG viewBox always 220x220; CSS scales the container -->
+          <svg class="progress-ring" id="progressRing" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
             <defs>
               <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" style="stop-color:#2979ff"/>
@@ -138,7 +118,8 @@
               </linearGradient>
             </defs>
             <circle class="bg" cx="110" cy="110" r="96" stroke-width="10"/>
-            <circle class="fg" id="ringFg" cx="110" cy="110" r="96" stroke-width="10" stroke-dasharray="603" stroke-dashoffset="603"/>
+            <circle class="fg" id="ringFg" cx="110" cy="110" r="96" stroke-width="10"
+              stroke-dasharray="603" stroke-dashoffset="603"/>
           </svg>
           <div class="circle-inner">
             <div class="circle-icon">🍎</div>
@@ -157,38 +138,20 @@
             <div class="daily-date" id="dailyDate">Today</div>
             <div class="daily-meta">0/3 • 0h 0min gap</div>
           </div>
-          <button class="cal-btn" onclick="openCalendar()" title="Open Calendar">📅</button>
+          <button class="cal-btn" onclick="openCalendar()">📅</button>
         </div>
 
         <div class="meal-list">
           <div class="meal-item" onclick="openMeal('Breakfast','🍳',['Eggs','Chicken','Bread','Broccoli'],'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80')">
-            <div class="meal-item-left">
-              <span class="meal-icon">🍳</span>
-              <div>
-                <div class="meal-name">Breakfast</div>
-                <div class="meal-sub">Tap to add details</div>
-              </div>
-            </div>
+            <div class="meal-item-left"><span class="meal-icon">🍳</span><div><div class="meal-name">Breakfast</div><div class="meal-sub">Tap to add details</div></div></div>
             <div class="meal-add-btn" onclick="event.stopPropagation();openMeal('Breakfast','🍳',['Eggs','Chicken','Bread','Broccoli'],'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80')">+</div>
           </div>
           <div class="meal-item" onclick="openMeal('Lunch','🥗',['Salad','Rice','Grilled Chicken','Avocado'],'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80')">
-            <div class="meal-item-left">
-              <span class="meal-icon">🥗</span>
-              <div>
-                <div class="meal-name">Lunch</div>
-                <div class="meal-sub">Tap to add details</div>
-              </div>
-            </div>
+            <div class="meal-item-left"><span class="meal-icon">🥗</span><div><div class="meal-name">Lunch</div><div class="meal-sub">Tap to add details</div></div></div>
             <div class="meal-add-btn" onclick="event.stopPropagation();openMeal('Lunch','🥗',['Salad','Rice','Grilled Chicken','Avocado'],'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80')">+</div>
           </div>
           <div class="meal-item" onclick="openMeal('Dinner','🍲',['Soup','Veggies','Brown Rice','Tofu'],'https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80')">
-            <div class="meal-item-left">
-              <span class="meal-icon">🍲</span>
-              <div>
-                <div class="meal-name">Dinner</div>
-                <div class="meal-sub">Tap to add details</div>
-              </div>
-            </div>
+            <div class="meal-item-left"><span class="meal-icon">🍲</span><div><div class="meal-name">Dinner</div><div class="meal-sub">Tap to add details</div></div></div>
             <div class="meal-add-btn" onclick="event.stopPropagation();openMeal('Dinner','🍲',['Soup','Veggies','Brown Rice','Tofu'],'https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80')">+</div>
           </div>
         </div>
@@ -200,33 +163,12 @@
       <div class="habits-content">
         <div class="habits-card">
           <div class="section-title">📋 Today's Habits</div>
-          <div class="habit-item">
-            <div class="habit-check done" onclick="toggleHabit(this)"></div>
-            <div class="habit-info"><div class="habit-name">Morning Meditation</div><div class="habit-streak">🔥 7 day streak</div></div>
-            <span class="habit-priority priority-high">High</span>
-          </div>
-          <div class="habit-item">
-            <div class="habit-check" onclick="toggleHabit(this)"></div>
-            <div class="habit-info"><div class="habit-name">Drink 8 glasses of water</div><div class="habit-streak">💧 3 day streak</div></div>
-            <span class="habit-priority priority-med">Medium</span>
-          </div>
-          <div class="habit-item">
-            <div class="habit-check done" onclick="toggleHabit(this)"></div>
-            <div class="habit-info"><div class="habit-name">30 min Exercise</div><div class="habit-streak">⚡ 12 day streak</div></div>
-            <span class="habit-priority priority-high">High</span>
-          </div>
-          <div class="habit-item">
-            <div class="habit-check" onclick="toggleHabit(this)"></div>
-            <div class="habit-info"><div class="habit-name">Read for 20 minutes</div><div class="habit-streak">📚 2 day streak</div></div>
-            <span class="habit-priority priority-low">Low</span>
-          </div>
-          <div class="habit-item">
-            <div class="habit-check" onclick="toggleHabit(this)"></div>
-            <div class="habit-info"><div class="habit-name">Sleep by 10 PM</div><div class="habit-streak">🌙 0 day streak</div></div>
-            <span class="habit-priority priority-med">Medium</span>
-          </div>
+          <div class="habit-item"><div class="habit-check done" onclick="toggleHabit(this)"></div><div class="habit-info"><div class="habit-name">Morning Meditation</div><div class="habit-streak">🔥 7 day streak</div></div><span class="habit-priority priority-high">High</span></div>
+          <div class="habit-item"><div class="habit-check" onclick="toggleHabit(this)"></div><div class="habit-info"><div class="habit-name">Drink 8 glasses of water</div><div class="habit-streak">💧 3 day streak</div></div><span class="habit-priority priority-med">Medium</span></div>
+          <div class="habit-item"><div class="habit-check done" onclick="toggleHabit(this)"></div><div class="habit-info"><div class="habit-name">30 min Exercise</div><div class="habit-streak">⚡ 12 day streak</div></div><span class="habit-priority priority-high">High</span></div>
+          <div class="habit-item"><div class="habit-check" onclick="toggleHabit(this)"></div><div class="habit-info"><div class="habit-name">Read for 20 minutes</div><div class="habit-streak">📚 2 day streak</div></div><span class="habit-priority priority-low">Low</span></div>
+          <div class="habit-item"><div class="habit-check" onclick="toggleHabit(this)"></div><div class="habit-info"><div class="habit-name">Sleep by 10 PM</div><div class="habit-streak">🌙 0 day streak</div></div><span class="habit-priority priority-med">Medium</span></div>
         </div>
-
         <div class="habits-card">
           <div class="section-title">✅ To-Do List</div>
           <div class="todo-item"><div class="todo-check done" onclick="toggleTodo(this)"></div><div class="todo-text done-text">Plan weekly meals</div></div>
@@ -248,30 +190,16 @@
           <div class="stat-card"><div class="stat-icon">🎯</div><div class="stat-num">5</div><div class="stat-label">Goals Active</div></div>
           <div class="stat-card"><div class="stat-icon">⭐</div><div class="stat-num">248</div><div class="stat-label">Total Points</div></div>
         </div>
-
         <div class="habits-card">
           <div class="section-title">📈 Weekly Habit Completion</div>
           <div class="chart-bars" id="chartBars"></div>
         </div>
-
         <div class="habits-card">
           <div class="section-title">🎯 Goal Progress</div>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar-label"><span>Nutrition Score</span><span>83%</span></div>
-            <div class="progress-bar"><div class="progress-bar-fill" style="width:0%" data-target="83"></div></div>
-          </div>
-          <div class="progress-bar-wrap" style="margin-top:14px;">
-            <div class="progress-bar-label"><span>Fitness Goals</span><span>65%</span></div>
-            <div class="progress-bar"><div class="progress-bar-fill" style="width:0%" data-target="65"></div></div>
-          </div>
-          <div class="progress-bar-wrap" style="margin-top:14px;">
-            <div class="progress-bar-label"><span>Sleep Quality</span><span>72%</span></div>
-            <div class="progress-bar"><div class="progress-bar-fill" style="width:0%" data-target="72"></div></div>
-          </div>
-          <div class="progress-bar-wrap" style="margin-top:14px;">
-            <div class="progress-bar-label"><span>Mindfulness</span><span>90%</span></div>
-            <div class="progress-bar"><div class="progress-bar-fill" style="width:0%" data-target="90"></div></div>
-          </div>
+          <div class="progress-bar-wrap"><div class="progress-bar-label"><span>Nutrition Score</span><span>83%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width:0%" data-target="83"></div></div></div>
+          <div class="progress-bar-wrap" style="margin-top:12px;"><div class="progress-bar-label"><span>Fitness Goals</span><span>65%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width:0%" data-target="65"></div></div></div>
+          <div class="progress-bar-wrap" style="margin-top:12px;"><div class="progress-bar-label"><span>Sleep Quality</span><span>72%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width:0%" data-target="72"></div></div></div>
+          <div class="progress-bar-wrap" style="margin-top:12px;"><div class="progress-bar-label"><span>Mindfulness</span><span>90%</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width:0%" data-target="90"></div></div></div>
         </div>
       </div>
     </div>
@@ -284,62 +212,28 @@
           <div class="profile-name" id="profile-name-display">User</div>
           <div class="profile-tagline">Build Better. Live Smarter. 🌟</div>
         </div>
-
         <div class="settings-list">
-          <div class="settings-item" onclick="showToast('Goals updated! 🎯')">
-            <span class="settings-icon">🎯</span>
-            <div><div class="settings-label">Goals Settings</div><div class="settings-label-sub">Set & manage your targets</div></div>
-            <span class="settings-arrow">›</span>
-          </div>
-          <div class="settings-item" onclick="showToast('Notifications configured! 🔔')">
-            <span class="settings-icon">🔔</span>
-            <div><div class="settings-label">Notifications</div><div class="settings-label-sub">Reminders & alerts</div></div>
-            <span class="settings-arrow">›</span>
-          </div>
-          <div class="settings-item" onclick="showToast('Subscription active! ⭐')">
-            <span class="settings-icon">⭐</span>
-            <div><div class="settings-label">Subscription / Plans</div><div class="settings-label-sub">Free Plan — Upgrade</div></div>
-            <span class="settings-arrow">›</span>
-          </div>
-          <div class="settings-item" onclick="showToast('Account settings opened! ⚙️')">
-            <span class="settings-icon">⚙️</span>
-            <div><div class="settings-label">Account Management</div><div class="settings-label-sub">Privacy & security</div></div>
-            <span class="settings-arrow">›</span>
-          </div>
-          <div class="settings-item" onclick="doLogout()">
-            <span class="settings-icon">🚪</span>
-            <div><div class="settings-label" style="color:#e74c3c;">Logout</div><div class="settings-label-sub">Sign out of HabitFlow</div></div>
-            <span class="settings-arrow">›</span>
-          </div>
+          <div class="settings-item" onclick="showToast('Goals updated! 🎯')"><span class="settings-icon">🎯</span><div><div class="settings-label">Goals Settings</div><div class="settings-label-sub">Set & manage your targets</div></div><span class="settings-arrow">›</span></div>
+          <div class="settings-item" onclick="showToast('Notifications configured! 🔔')"><span class="settings-icon">🔔</span><div><div class="settings-label">Notifications</div><div class="settings-label-sub">Reminders & alerts</div></div><span class="settings-arrow">›</span></div>
+          <div class="settings-item" onclick="showToast('Subscription active! ⭐')"><span class="settings-icon">⭐</span><div><div class="settings-label">Subscription / Plans</div><div class="settings-label-sub">Free Plan — Upgrade</div></div><span class="settings-arrow">›</span></div>
+          <div class="settings-item" onclick="showToast('Account settings opened! ⚙️')"><span class="settings-icon">⚙️</span><div><div class="settings-label">Account Management</div><div class="settings-label-sub">Privacy & security</div></div><span class="settings-arrow">›</span></div>
+          <div class="settings-item" onclick="doLogout()"><span class="settings-icon">🚪</span><div><div class="settings-label" style="color:#e74c3c;">Logout</div><div class="settings-label-sub">Sign out of HabitFlow</div></div><span class="settings-arrow">›</span></div>
         </div>
       </div>
     </div>
 
   </div><!-- app-main -->
 
-  <!-- Bottom Navbar -->
   <nav class="bottom-nav">
-    <button class="nav-btn active" id="nav-dashboard" onclick="switchTab('dashboard')">
-      <span class="nav-icon">📅</span>
-      <span class="nav-label">Home</span>
-    </button>
-    <button class="nav-btn" id="nav-habits" onclick="switchTab('habits')">
-      <span class="nav-icon">📋</span>
-      <span class="nav-label">Habits</span>
-    </button>
+    <button class="nav-btn active" id="nav-dashboard" onclick="switchTab('dashboard')"><span class="nav-icon">📅</span><span class="nav-label">Home</span></button>
+    <button class="nav-btn" id="nav-habits" onclick="switchTab('habits')"><span class="nav-icon">📋</span><span class="nav-label">Habits</span></button>
     <button class="nav-btn-center" onclick="openQuickAdd()">➕</button>
-    <button class="nav-btn" id="nav-analytics" onclick="switchTab('analytics')">
-      <span class="nav-icon">📊</span>
-      <span class="nav-label">Stats</span>
-    </button>
-    <button class="nav-btn" id="nav-profile" onclick="switchTab('profile')">
-      <span class="nav-icon">👤</span>
-      <span class="nav-label">Profile</span>
-    </button>
+    <button class="nav-btn" id="nav-analytics" onclick="switchTab('analytics')"><span class="nav-icon">📊</span><span class="nav-label">Stats</span></button>
+    <button class="nav-btn" id="nav-profile" onclick="switchTab('profile')"><span class="nav-icon">👤</span><span class="nav-label">Profile</span></button>
   </nav>
 </div>
 
-<!-- ====== MEAL DETAIL PAGE ====== -->
+<!-- ====== MEAL DETAIL ====== -->
 <div class="page" id="page-meal">
   <div class="meal-detail-header">
     <button class="back-btn" onclick="goBackToApp()">←</button>
@@ -347,31 +241,10 @@
     <div class="meal-detail-time" id="mealDetailTime"></div>
   </div>
   <div class="meal-detail-body">
-    <div class="detail-card">
-      <h3>Wealthy Level</h3>
-      <div class="sub">Diverse</div>
-      <div class="glow-score"><span class="glow-score-num">+2</span></div>
-      <div class="tip">If you want to increase a Nutritional Level next time, add more fiber and source of fats.</div>
-    </div>
-    <div class="detail-card">
-      <h3>Meal</h3>
-      <div class="meal-food-tags" id="mealFoodTags"></div>
-      <img class="meal-food-img" id="mealFoodImg" src="" alt="Meal" loading="lazy" />
-      <div class="tip">If you want to increase a Nutritional Level next time, add more fiber and source of fats.</div>
-    </div>
-    <div class="detail-card" id="rainbowCard">
-      <h3>Eat the Rainbow 🌈</h3>
-      <div class="rainbow-row" id="rainbowRow"></div>
-    </div>
-    <div class="detail-card">
-      <h3>Macronutrient Breakdown</h3>
-      <div class="macro-row">
-        <div class="macro-item"><div class="macro-level high">High</div><div class="macro-name">Protein</div></div>
-        <div class="macro-item"><div class="macro-level low">Low</div><div class="macro-name">Carbs</div></div>
-        <div class="macro-item"><div class="macro-level low">Low</div><div class="macro-name">Fat</div></div>
-        <div class="macro-item"><div class="macro-level high">High</div><div class="macro-name">Fiber</div></div>
-      </div>
-    </div>
+    <div class="detail-card"><h3>Wealthy Level</h3><div class="sub">Diverse</div><div class="glow-score"><span class="glow-score-num">+2</span></div><div class="tip">If you want to increase a Nutritional Level next time, add more fiber and source of fats.</div></div>
+    <div class="detail-card"><h3>Meal</h3><div class="meal-food-tags" id="mealFoodTags"></div><img class="meal-food-img" id="mealFoodImg" src="" alt="Meal" loading="lazy"/><div class="tip">If you want to increase a Nutritional Level next time, add more fiber and source of fats.</div></div>
+    <div class="detail-card"><h3>Eat the Rainbow 🌈</h3><div class="rainbow-row" id="rainbowRow"></div></div>
+    <div class="detail-card"><h3>Macronutrient Breakdown</h3><div class="macro-row"><div class="macro-item"><div class="macro-level high">High</div><div class="macro-name">Protein</div></div><div class="macro-item"><div class="macro-level low">Low</div><div class="macro-name">Carbs</div></div><div class="macro-item"><div class="macro-level low">Low</div><div class="macro-name">Fat</div></div><div class="macro-item"><div class="macro-level high">High</div><div class="macro-name">Fiber</div></div></div></div>
   </div>
 </div>
 
@@ -381,31 +254,11 @@
     <div class="modal-handle"></div>
     <div class="modal-title">Quick Add ✨</div>
     <div class="quick-add-grid">
-      <div class="quick-add-item" onclick="showToast('New Habit added! 🔥');closeQuickAdd()">
-        <div class="quick-add-icon">🎯</div>
-        <div class="quick-add-label">New Habit</div>
-        <div class="quick-add-sub">Track daily</div>
-      </div>
-      <div class="quick-add-item" onclick="showToast('New Task created! ✅');closeQuickAdd()">
-        <div class="quick-add-icon">✅</div>
-        <div class="quick-add-label">New Task</div>
-        <div class="quick-add-sub">To-do list</div>
-      </div>
-      <div class="quick-add-item" onclick="showToast('Reminder set! ⏰');closeQuickAdd()">
-        <div class="quick-add-icon">⏰</div>
-        <div class="quick-add-label">Reminder</div>
-        <div class="quick-add-sub">Set alert</div>
-      </div>
-      <div class="quick-add-item" onclick="showToast('Goal created! 🌟');closeQuickAdd()">
-        <div class="quick-add-icon">🌟</div>
-        <div class="quick-add-label">Create Goal</div>
-        <div class="quick-add-sub">Long-term</div>
-      </div>
-      <div class="quick-add-item" onclick="showToast('Note saved! 📝');closeQuickAdd()" style="grid-column:1/-1">
-        <div class="quick-add-icon">📝</div>
-        <div class="quick-add-label">Quick Note</div>
-        <div class="quick-add-sub">Save your thoughts fast</div>
-      </div>
+      <div class="quick-add-item" onclick="showToast('New Habit added! 🔥');closeQuickAdd()"><div class="quick-add-icon">🎯</div><div class="quick-add-label">New Habit</div><div class="quick-add-sub">Track daily</div></div>
+      <div class="quick-add-item" onclick="showToast('New Task created! ✅');closeQuickAdd()"><div class="quick-add-icon">✅</div><div class="quick-add-label">New Task</div><div class="quick-add-sub">To-do list</div></div>
+      <div class="quick-add-item" onclick="showToast('Reminder set! ⏰');closeQuickAdd()"><div class="quick-add-icon">⏰</div><div class="quick-add-label">Reminder</div><div class="quick-add-sub">Set alert</div></div>
+      <div class="quick-add-item" onclick="showToast('Goal created! 🌟');closeQuickAdd()"><div class="quick-add-icon">🌟</div><div class="quick-add-label">Create Goal</div><div class="quick-add-sub">Long-term</div></div>
+      <div class="quick-add-item" onclick="showToast('Note saved! 📝');closeQuickAdd()" style="grid-column:1/-1"><div class="quick-add-icon">📝</div><div class="quick-add-label">Quick Note</div><div class="quick-add-sub">Save your thoughts fast</div></div>
     </div>
     <button class="modal-close" onclick="closeQuickAdd()">Cancel</button>
   </div>
@@ -417,14 +270,13 @@
     <div class="modal-handle"></div>
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
       <button onclick="changeMonth(-1)" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--blue-accent);">‹</button>
-      <div style="font-size:16px;font-weight:700;color:var(--text-dark);" id="calMonthLabel"></div>
+      <div style="font-size:15px;font-weight:700;color:var(--text-dark);" id="calMonthLabel"></div>
       <button onclick="changeMonth(1)" style="background:none;border:none;font-size:20px;cursor:pointer;color:var(--blue-accent);">›</button>
     </div>
     <div class="cal-grid" id="calGrid"></div>
-    <button class="modal-close" style="margin-top:16px;" onclick="closeCalendar()">Close</button>
+    <button class="modal-close" style="margin-top:14px;" onclick="closeCalendar()">Close</button>
   </div>
 </div>
-
 
 <script src="script.js"></script>
 </body>
